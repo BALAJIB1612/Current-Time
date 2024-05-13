@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurrentTime</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script>
+    window.onload = function () {
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            // Formatting the time to have leading zeros if needed
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            // Constructing the time string in the format HH:MM:SS
+            var currentTime = hours + ':' + minutes + ':' + seconds;
+
+            // Setting the value of the textbox with id "timeTextbox" to the current time
+            document.getElementById('timeTextbox').value = currentTime;
+        }
+        updateTime();
+
+        // Update the time every second
+        setInterval(updateTime, 1000);
+    };
+</script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="p-5">
+            <h1 class="text-center text-2xl text-warning">AMC</h1>
+            <h1 class="fs-4">Welcome!..</h1>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <img  src="image/slomo.jpg" class="img-fluid  rounded-l-lg">
+                </div>
+                
+                 
+                <div class="col-md-3">
+                    
+                    <label class="">Time</label>
+                    <input type="time"  class="form-control" id="timeTextbox">
+                    
+                   
+
+            </div>
+            <div class="row">
+                <div class="col-md-6"></div>
+
+
+
+
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
+</body>
+</html>
